@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+    <a href="#" class="download" style="color:#fff; ">
+        Download BIDC Mobile App
+    </a>
+
+<script src="./jquery-1.11.1.min.js"></script>
+<script>
+
+    const userAgent = navigator.userAgent;
+    const regex = /(iPhone|iPad|iPod|Android|BlackBerry|Windows Phone|Windows NT)/;
+    const match = userAgent.match(regex);
+    const deviceName = match ? match[0] : "Unknown";
+
+    if(deviceName !== null){
+        if(deviceName === 'iPhone'){
+            window.location.href= 'https://itunes.apple.com/kh/app/bidc-mobile-banking-cambodia/id1056453667';
+        }else if(deviceName === 'Android'){
+
+            window.location.href= 'https://play.google.com/store/apps/details?id=com.campopay.bidc&amp;hl=en'; 
+        }else {
+            window.location.href='https://www.bidc.com.kh/';
+        }
+    }
+</script>
+
+</body>
+</html>
